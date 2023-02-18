@@ -21,20 +21,39 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body  class="container card text-left mt-5 b-3 border-success border-3">
       <div>
         <form method="post" action="event_register.php">
-                    <input name="name"/>
-        <textarea name="description"></textarea>
+        <div  class="form-group">  
+        <label class="text-align P-2"> Event-Name:</label><br>
+        <input name="name"/>
+        </div>
+        <div  class="form-group">  
+        <label class="text-align P-2"> Description of event:</label><br>       
+        <textarea  rows="5" name="description"></textarea>
+        </div>
+        <div  class="form-group">  
+        <label class="text-align P-2"> Event Date</label><br>       
         <input type="datetime-local" name="datetime"/>
+        </div>
+        <div  class="form-group">  
+        <label class="text-align P-4 m-2"> Type of Event</label>       
         <select name="type">
             <option value="virtual">Virtual</option>
             <option value="offline">Offline</option>
         </select>
+        </div>
+        <div  class="form-group">  
+        <label class="text-align P-2"> Location of Event</label> <br>      
         <input type="text" name="location"/>
+        </div>
+        <div  class="form-group">  
+        <label class="text-align P-2"> Number of seats/Booking available</label><br>       
         <input name="seating"/>
-        <input type="submit" name="submit" value="Add Event"/>
+        </div>
+        <input type="submit" class="btn btn-primary p-2"  name="submit" value="Add Event"/>
         </form>
+        <p class="p-2"></p>
       </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
